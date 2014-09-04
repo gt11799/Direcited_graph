@@ -75,11 +75,9 @@ def test():
     #    print(" num_nodes: %s, the graph is: %s" %(i, make_complete_graph(i)))
     #for i in ['a', '5.44', 9.77, [9, 8]]:
     #    print(" num nodes: %s, the graph is: %s" %(i, make_complete_graph(i)))
-    temp = 0
-    for digraph in [EX_GRAPH0, EX_GRAPH1, EX_GRAPH2]:
-        print('EX_GRSPH%d in_degrees is: %s\n in_degrees_distribution is %s' %(temp, compute_in_degrees(digraph),
-         in_degree_distribution(digraph)))
-        temp += 1
+    for digraph in ['EX_GRAPH0', 'EX_GRAPH1', 'EX_GRAPH2']:
+        print('%s in_degrees is: %s\n in_degrees_distribution is %s' %(digraph, compute_in_degrees(eval(digraph)),
+            in_degree_distribution(eval(digraph))))
         
 #test()
         
